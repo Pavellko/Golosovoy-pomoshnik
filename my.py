@@ -1,6 +1,5 @@
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QWidget
-import os
 import sys
 import speech_recognition as sr
 import webbrowser
