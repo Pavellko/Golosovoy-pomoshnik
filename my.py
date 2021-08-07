@@ -12,15 +12,10 @@ class App(QWidget):
 		self.start()
 		self.op()
 
-
-
-
 	def start(self):
 
 		self.ui = uic.loadUi("my_diz.ui")
 		self.ui.show()
-
-
 
 	def op(self):
 		self.ui.btn_1.clicked.connect(self.pr)
@@ -33,8 +28,6 @@ class App(QWidget):
 	def stop(self):
 		sys.exit()
 	
-
-
 def command():
 		r=sr.Recognizer()
 		with sr.Microphone() as source:
@@ -49,8 +42,6 @@ def command():
 			print(zadanie)
 
 		except sr.UnknownValueError:
-
-
 			zadanie = command()
 		return zadanie
 
@@ -61,12 +52,8 @@ def make(zadanie):
 			ex.ui.zx.setText("Хорошо, останавливаю")
 			sys.exit()
 		elif "напечатать" in zadanie:
-			
-			
+		
 			pg.typewrite(zadanie)
-
-
-
 
 if __name__=='__main__':
 	app = QApplication(sys.argv)
